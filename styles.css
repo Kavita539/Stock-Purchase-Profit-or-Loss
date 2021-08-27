@@ -52,6 +52,10 @@ main{
     margin: auto;
 }
 
+.input-style {
+   display: block;
+}
+
 h1 {
     text-align: center;
     font-size: 3rem;
