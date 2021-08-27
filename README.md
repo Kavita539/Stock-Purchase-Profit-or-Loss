@@ -1,5 +1,10 @@
 # Stocks Calculator
-This app is built in HTML,CSS and Vanilla JS. This app checks the profit or loss of stock holder according to how many stock quantities he bought and its current price.
+This app checks the profit or loss of stock holder according to how many stock quantities he bought and its current price.
+
+# Technology used:
+1. HTML
+1. CSS
+1. Vanilla Js
 
 # How to use:
 1. Go to the mentioned URL
