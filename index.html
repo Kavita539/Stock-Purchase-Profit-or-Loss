@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,30 +11,38 @@
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <nav>
         <div class="brand">KayPeeCodes</div>
-        <div><a target="_blank" class="top_icon" href="https://kavita-pathak-portfolio.netlify.app/"><i class="fa fa-briefcase" aria-hidden="true"></i></a></div>
+        <div><a target="_blank" class="top_icon" href="https://kavita-pathak-portfolio.netlify.app/"><i
+                    class="fa fa-briefcase" aria-hidden="true"></i></a></div>
     </nav>
     <h1>Stocks Calculator</h1>
     <h2>Check Profit/Loss on your stocks</h2>
 
     <main>
-        <label class="input-style" for="">
-        <input type="number" id="initial-price" placeholder="Enter Initial Price Here"/>
-    </label>
+        <form id="form">
+            <label class="input-style" for="">
+                <input type="number" id="initial-price" placeholder="Enter Initial Price Here" min="0.1" step="0.1"
+                    required />
+            </label>
 
-    <label class="input-style" for="">
-        <input type="number" id="stocks-quantity" placeholder="Enter the number of stocks bought"/>
-    </label>
+            <label class="input-style" for="">
+                <input type="number" id="stocks-quantity" placeholder="Enter the number of stocks bought" min="0.1"
+                    step="0.1" required />
+            </label>
 
-    <label class="input-style" for="">
-        <input type="number" id="current-price" placeholder="Enter the current price of the stocks">
-    </label>
+            <label class="input-style" for="">
+                <input type="number" id="current-price" placeholder="Enter the current price of the stocks" min="0.1"
+                    step="0.1" required />
+            </label>
 
-    <button id="submit-btn">Check</button>
+            <button id="submit-btn" type="submit">Check</button>
 
-    <div id="output"></div>
+        </form>
+
+        <div id="output"></div>
     </main>
 
     <footer>
@@ -47,12 +56,12 @@
                         class="fab fa-linkedin-in"></i></a>
             </li>
             <li class="list-item-inline">
-                <a class="link" target="_blank" href="https://twitter.com/KavitaP_03"><i
-                    class="fab fa-twitter"></i></a>
+                <a class="link" target="_blank" href="https://twitter.com/KavitaP_03"><i class="fab fa-twitter"></i></a>
             </li>
         </ul>
     </footer>
 
     <script src="app.js"></script>
 </body>
+
 </html>
