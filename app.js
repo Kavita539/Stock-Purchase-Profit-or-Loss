@@ -3,11 +3,11 @@ var stocksQuantity = document.querySelector("#stocks-quantity");
 var currentPrice = document.querySelector("#current-price");
 var submitBtn = document.querySelector("#submit-btn");
 var outputBox = document.querySelector("#output");
+var inputForm = document.querySelector("#form");
 
-submitBtn.addEventListener('click', submitHandler);
-
-function submitHandler(){
-    var ip = Number(initialPrice.value);
+inputForm.addEventListener("submit",(e)=>{
+  e.preventDefault();
+  var ip = Number(initialPrice.value);
     var qty = Number(stocksQuantity.value);
     var curr = Number(currentPrice.value);
     if(ip&&qty&&curr){
@@ -15,22 +15,20 @@ function submitHandler(){
     }else{
      showOutput(`Please enter all three fields`);
     }
-  }
-    
-
+})
 
 function calculateProfitAndLoss(initial, quantity, current){
     if(initial>current){
       var loss = (initial-current)*quantity;
       var lossPercentage = (loss/(initial* quantity))*100;
       outputBox.style.color = 'red';
-      showOutput(`Whoops! Your loss is ${loss} and the loss percentage is ${lossPercentage.toFixed(2)} %`);
+      showOutput(`Whoops! Your loss is ${loss.toFixed(2)} and the loss percentage is ${lossPercentage.toFixed(2)} %`);
 
     }else if(current>initial){
         var profit = (current-initial)*quantity;
          var profitPercentage = (profit/(initial* quantity))*100;
          outputBox.style.color = 'green';
-         showOutput(`Yayy! Your Profit is ${profit} and the profit percentage is ${profitPercentage.toFixed(2)} %`);
+         showOutput(`Yayy! Your Profit is ${profit.toFixed(2)} and the profit percentage is ${profitPercentage.toFixed(2)} %`);
 
 
     }else{
